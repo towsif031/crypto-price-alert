@@ -1,6 +1,7 @@
 const {app, BrowserWindow, Menu} = require ('electron')
 const path = require ('path')
 const url = require ('url')
+const shell = require('electron').shell
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -12,7 +13,7 @@ function createWindow () {
 
     // and load the index.html of the app.
     win.loadURL(url.format({
-        pathname: path.join (__dirname, 'index.html'),
+        pathname: path.join (__dirname, 'src/index.html'),
         protocol: 'file:',
         slashes: true
     }))
@@ -33,8 +34,19 @@ function createWindow () {
             label: 'Menu',
             submenu: [
                 {label: 'Adjust Notification Value'},
-                {label: 'CoinMarketCap'},
-                {label: 'Exit'},
+                {
+                    label: 'CoinMarketCap',
+                    click() {
+                        shell.openExternal('http://coinmarketcap.com')
+                    }
+                },
+                {type: 'separator'},
+                {
+                    label: 'Exit',
+                    click() {
+                        app.quit()
+                    }
+                },
             ]
         }
     ])
