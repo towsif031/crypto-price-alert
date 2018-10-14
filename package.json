@@ -1,5 +1,5 @@
 {
-  "name": "crypto-price-alert",
+  "name": "crypto-app",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -10,9 +10,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "3.0.4"
+    "electron": "1.7.9"
   },
   "dependencies": {
-    "axios": "^0.18.0"
+    "axios": "^0.17.1"
   }
 }
