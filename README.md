@@ -17,5 +17,20 @@ npm install
 npm start
 ```
 
+## To package & build
+
+##### For Windows
+```bash
+npm run package-win
+```
+##### For Mac
+```bash
+npm run package-mac
+```
+##### For Linux
+```bash
+npm run package-linux
+```
+
 Or download the 'crypto-price-alert-win32-ia32.rar' file located in 'release-builds/' and extract.
 Then run 'crypto-price-alert.exe'
